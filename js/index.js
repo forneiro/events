@@ -16,8 +16,16 @@ document.addEventListener('DOMContentLoaded', function () {
   // Cambia a la siguiente imagen cada 3 segundos (3000 milisegundos)
   setInterval(nextSlide, 4000);
 
+
+
   const navBar = document.querySelector('.nav-bar');
   const nav = document.querySelector('.nav');
+  var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  document.addEventListener('scroll', () => {
+    if (screenWidth > 992) {
+      nav.style.transform = "translateY(" + window.scrollY + "px)";
+    }
+  })
 
   navBar.addEventListener('click', () => {
     if (nav.style.top == '0px') {
