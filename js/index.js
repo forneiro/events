@@ -20,10 +20,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const navBar = document.querySelector('.nav-bar');
   const nav = document.querySelector('.nav');
-  var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  
   document.addEventListener('scroll', () => {
-    if (screenWidth > 992) {
+    if (window.innerWidth > 992) {
       nav.style.transform = "translateY(" + window.scrollY + "px)";
+    } else {
+      nav.style.transform = "translateY(" + 0 + "px)";
     }
   })
 
