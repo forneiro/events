@@ -6,7 +6,8 @@
     --paragraph: #717171d6;
     --icons: #494949d6;
     --ligth-gray: #bcbcbc;
-    --green: #5debc1;
+    --green: #20b286;
+    --red: #ae3510;
 }
 
 html {
@@ -128,8 +129,6 @@ textarea {
 
 .dropdown {
     height: 100%;
-    /* position: relative;
-    z-index: 5; */
 } 
 
 .btn-drop {
@@ -217,6 +216,7 @@ textarea {
 .artists {
     padding: 0 3rem;
     margin: 6rem 0;
+    position: relative;
 }
 
 .artists_articles {
@@ -265,6 +265,80 @@ textarea {
     margin-top: 2rem;
 }
 
+.card-portal {
+    max-width: 50%;
+    margin: 0 auto;
+    top: -100rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: var(--white);
+    padding: 0 0 2rem;
+    box-shadow: 6px 10px 30px 1px var(--icons);
+    opacity: 0;
+    transition: all .9s ease;
+}
+.card-portal-header {
+    background-color: var(--green);
+    padding: 1rem 2rem;
+}
+.card-portal-body {
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+.card-portal h4 {
+    font-weight: normal;
+    font-size: 3.2rem;
+    letter-spacing: .3rem;
+    color: var(--white);
+    margin: 1rem 0;
+}
+.card-portal__input {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+.card-portal__input input {
+    padding: 1rem;
+    border: 1px solid var(--ligth-gray);
+}
+.card-portal--btn {
+    background-color: var(--green);
+    width: 100%;
+    padding: 1.6rem 1rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+.card-portal--btn:hover {
+    cursor: pointer;
+    background-color: var(--gray);
+}
+.card-portal--close {
+    background-color: var(--red);
+    padding: 1.3rem 1rem;
+    margin-top: 3rem;
+    max-width: 10rem;
+}
+.card-portal--close:hover {
+    cursor: pointer;
+}
+.bg-black-pay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--softBlack);
+    opacity: 0;
+    transition: all .9s ease;
+    z-index: -20;
+}
 /* LOCATION */
 .location iframe {
     width: 100%;
@@ -396,6 +470,10 @@ textarea {
         width: 100%;
     }
 
+    /* UPCOMING SHOWS */
+    .card-portal {
+        max-width: 90%;
+    }
     /* CONTACT INFO */
     .contact-info {
         flex-direction: column;

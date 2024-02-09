@@ -64,5 +64,29 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+
+  var portalCard = document.querySelector('.card-portal');
+  const payTicket = document.querySelectorAll('.payTicket');
+  const payClose = document.querySelector('.card-portal--close');
+  const bgBlackPay = document.querySelector('.bg-black-pay');
+
+  payTicket.forEach(button => {
+    button.addEventListener('click', event => {
+      event.preventDefault();
+
+      portalCard.style.opacity = '1';
+      portalCard.style.top = '10rem';
+      bgBlackPay.style.opacity = '1';
+      bgBlackPay.style.zIndex = '200';
+
+    })
+  })
+  payClose.addEventListener('click', () => {
+      portalCard.style.opacity = '0';
+      portalCard.style.top = '-100rem';
+      bgBlackPay.style.opacity = '0';
+      bgBlackPay.style.zIndex = '-20';
+  })
+
 });
 
