@@ -113,7 +113,6 @@ textarea {
     padding: 1.8rem 2.6rem;
     border-radius: .2rem;
     text-transform: uppercase;
-    border: none;
     cursor: pointer;
     position: relative;
     z-index: 10;
